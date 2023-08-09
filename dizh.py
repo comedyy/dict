@@ -29,8 +29,8 @@ queryResult = x.queryZH(word)
 queryResult.sort(key=GetWeight, reverse=True)
 count = min(len(queryResult), 5)
 
-print("查询【{}】".format(word))
+print("查询【\033[32m{}\033[0m】\n".format(word))
 for x in range(count):
 	resultItem = queryResult[x]
-	print("[{}]. 【{}】 {}-{}  {}".format(x, resultItem["word"], resultItem["collins"], resultItem["frq"], resultItem["translation"]))
+	print("\033[32m[{}].\033[0m 【{}】 {}-{}  {}".format(x, resultItem["word"], resultItem["collins"], resultItem["frq"], resultItem["translation"]))
 	

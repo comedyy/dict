@@ -27,6 +27,6 @@ if queryResult == None:
 
 
 print("\n")
-print("单词【{}】音标【{}】 柯林斯: {} 牛津核心: {} 分类：{}".format(queryResult["word"], queryResult["phonetic"], queryResult["collins"], queryResult["oxford"], queryResult["tag"]))
+print("单词【\033[32m{}\033[0m】音标【{}】 柯林斯: {} 牛津核心: {} 分类：{}".format(queryResult["word"], queryResult["phonetic"], queryResult["collins"], queryResult["oxford"], queryResult["tag"]))
 print(queryResult["definition"])
 print(queryResult["translation"])
