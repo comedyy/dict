@@ -1,3 +1,5 @@
+需要解压xx.db.zip到xx.db 再使用
+
 ## 给console使用，使用dict命令。
 `dict hello` 
 输出
