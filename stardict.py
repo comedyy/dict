@@ -143,6 +143,17 @@ class StarDict (object):
             return None
         record = c.fetchone()
         return self.__record2obj(record)
+    
+    def queryZH (self, key):
+        c = self.__conn.cursor()
+        c.execute("select * from stardict where translation like '%{}%'".format(key))
+
+        records = c.fetchall()
+        list = []
+        for x in records:
+            list.append(self.__record2obj(x))
+        
+        return list
 
     # 查询单词匹配
     def match (self, word, limit = 10, strip = False):
