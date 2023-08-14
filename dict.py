@@ -14,7 +14,7 @@ def QueryResult(x, inputWord):
 
 	if queryResult == None:
 		print("未找到【{}】".format(inputWord))
-		exit(0)
+		return
 
 
 	print("\n")
@@ -37,4 +37,5 @@ if __name__ == '__main__':
 			word += sys.argv[x]
 
 	x = stardict.open_dict(path + "/xx.db")
+
 	QueryResult(x, word)
